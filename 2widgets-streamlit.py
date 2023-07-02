@@ -38,7 +38,7 @@ dropdown_player = st.sidebar.selectbox(label="Seleccione el Jugador: ", options 
 
 
 def selectOptions(club):
-    if dropdown_club=ALL:
+    if dropdown_club==ALL:
         dfOptions=df
     else:
         dfOptions=df[df['Club']==club]
