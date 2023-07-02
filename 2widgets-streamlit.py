@@ -40,7 +40,7 @@ def unique_sorted_values_plus_ALL(array):
 
 # In[41]:
 
-def common_filtering(club):
+def common_filtering():
     df1=df[df.Club == club]
     selbox2 = st.sidebar.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(df1.Jugador)
 
