@@ -77,9 +77,9 @@ with st.container():
         if dropdown_player==ALL:
             st.write(df)
         else:
-            st.write(df['Jugador']==dropdown_player)
+            st.write(df[df['Jugador']==dropdown_player])
     else:
         if dropdown_player==ALL:
             st.write(df['Club']==dropdown_club)
         else:
-            st.write(df['Club']==dropdown_club & df['Player']==dropdown_player)
+            st.write(df[df['Club']==dropdown_club]] & df[df['Player']==dropdown_player]])
