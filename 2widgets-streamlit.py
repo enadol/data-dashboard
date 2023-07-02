@@ -46,7 +46,8 @@ dropdown_club = st.selectbox(label="Seleccione el club: ", options =    unique_s
 
 dropdown_player = st.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(df.Jugador))
 
-st.sidebar([dropdown_club, dropdown_player])
+st.sidebar(dropdown_club)
+st.sidebar(dropdown_player)
 
 # In[45]:
 
