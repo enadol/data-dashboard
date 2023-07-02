@@ -46,17 +46,17 @@ def selectOptions(club):
 
 
 
-def common_filtering(club, player):
-        if (club == ALL) & (player == ALL):
+def common_filtering(dropdown_club, dropdown_player):
+        if (dropdown_club == ALL) & (dropdown_player == ALL):
             dropdown_player.options = unique_sorted_values_plus_ALL(df.Jugador)
             #dropdown_player = widgets.Dropdown(options = unique_sorted_values_plus_ALL(df.Jugador))
             common_filter = df
-        elif (club == ALL):
+        elif (dropdown_club == ALL):
             dropdown_player.options = unique_sorted_values_plus_ALL(df.Jugador)
             #dropdown_player = widgets.Dropdown(options = unique_sorted_values_plus_ALL(df.Jugador))
             common_filter = df[df.Jugador == player]
-        elif (player == ALL):
-            if(club ==ALL):
+        elif (dropdown_player == ALL):
+            if(dropdown_club ==ALL):
                 dropdown_player.options = unique_sorted_values_plus_ALL(df.Jugador)
             else:
                 df1=df[df.Club == club]
@@ -64,20 +64,21 @@ def common_filtering(club, player):
             #dropdown_player = widgets.Dropdown(options = unique_sorted_values_plus_ALL(df.Jugador))
             common_filter = df[df.Club == club]
         else:
-            if(club != ALL):
+            if(dropdown_club != ALL):
                 df1=df[df.Club == club]
                 dropdown_player.options = unique_sorted_values_plus_ALL(df1.Jugador)
                 #dropdown_player = widgets.Dropdown(options = unique_sorted_values_plus_ALL(df1.Jugador))
                 common_filter = df[df.Jugador == player]
+        return common_filter
     
 
 # In[18]:
 
 
-def dropdown_club_eventhandler(change):
-    common_filtering(change.new, dropdown_player.value)
-def dropdown_player_eventhandler(change):
-    common_filtering(dropdown_club.value, change.new)
+#def dropdown_club_eventhandler(change):
+#    common_filtering(change.new, dropdown_player.value)
+#def dropdown_player_eventhandler(change):
+#    common_filtering(dropdown_club.value, change.new)
 
 
 # In[46]:
