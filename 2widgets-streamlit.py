@@ -28,7 +28,7 @@ st.set_page_config(layout = "wide", page_title="Bundesliga Data Dashboard")
 # In[38]:
 
 
-df=pd.read_excel("F:\Dokumente\Etiquetas fútbol\\blPlayersAll23.xlsm", sheet_name="blplayers2023")
+df=pd.read_excel("blPlayersAll23.xlsm", sheet_name="blplayers2023")
 
 
 # In[39]:
