@@ -31,7 +31,7 @@ def unique_sorted_values_plus_ALL(array):
     return unique
 
 
-def common_filtering(dropdown_club, dropdown_player):
+def common_filtering():
         if (dropdown_club == ALL) & (dropdown_player == ALL):
             dropdown_player.options = unique_sorted_values_plus_ALL(df.Jugador)
             #dropdown_player = widgets.Dropdown(options = unique_sorted_values_plus_ALL(df.Jugador))
@@ -57,18 +57,8 @@ def common_filtering(dropdown_club, dropdown_player):
         return common_filter
 
 
-def changeDF():
-    if dropdown_club==ALL:
-        dfOptions=df
-    else:
-        dfOptions=df[df.Club==dropdown_club]
-    return dfOptions
-
-
-
 #dropdown_club
-dropdown_club = st.sidebar.selectbox(label="Seleccione el club: ", options =    unique_sorted_values_plus_ALL(df.Club))
-dropdown_club.on_change=changeDF()
+dropdown_club = st.sidebar.selectbox(label="Seleccione el club: ", options =    unique_sorted_values_plus_ALL(df.Club), on_change=common_filtering())
 dropdown_player = st.sidebar.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(df.Jugador))
 
 
