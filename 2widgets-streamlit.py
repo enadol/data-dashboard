@@ -16,7 +16,7 @@ import pandas as pd
 #import matplotlib.pyplot as plt
 #from IPython.display import display
 import streamlit as st
-import plotly
+import plotly as plt
 
 
 # In[37]:
