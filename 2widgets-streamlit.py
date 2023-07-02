@@ -19,14 +19,7 @@ import streamlit as st
 import plotly as plt
 
 
-# In[37]:
-
-
 st.set_page_config(layout = "wide", page_title="Bundesliga Data Dashboard")
-
-
-# In[38]:
-
 
 df=pd.read_excel("blPlayersAll23.xlsm", sheet_name="blplayers2023")
 
@@ -38,14 +31,20 @@ def unique_sorted_values_plus_ALL(array):
     return unique
 
 
-# In[41]:
-
-
-
 dropdown_club = st.sidebar.selectbox(label="Seleccione el club: ", options =    unique_sorted_values_plus_ALL(df.Club))
 #dropdown_club
 
 dropdown_player = st.sidebar.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(df.Jugador))
+
+
+def selectOptions(club):
+    if dropdown_club=ALL:
+        dfOptions=df
+    else:
+        dfOptions=df[df['Club']==club]
+    return dfOptions
+
+
 
 def common_filtering(club, player):
         if (club == ALL) & (player == ALL):
