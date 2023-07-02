@@ -58,24 +58,21 @@ def common_filtering(dropdown_club, dropdown_player):
 
 
 
+def selectOptions(club):
+    if dropdown_club==ALL:
+        dfOptions=df
+    else:
+        dfOptions=df[df['Club']==club]
+    return dfOptions
+
 
 
 #dropdown_club
-dropdown_club = st.sidebar.selectbox(label="Seleccione el club: ", options =    unique_sorted_values_plus_ALL(df.Club))
+dropdown_club = st.sidebar.selectbox(label="Seleccione el club: ", options =    unique_sorted_values_plus_ALL(df.Club), on_change=selectOptions(dropdown_club))
 dropdown_player = st.sidebar.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(df.Jugador))
 
 
-#def selectOptions(club):
-#    if dropdown_club==ALL:
-#        dfOptions=df
-#    else:
-#        dfOptions=df[df['Club']==club]
-#    return dfOptions
-
-
-
-
-    
+   
 
 # In[18]:
 
