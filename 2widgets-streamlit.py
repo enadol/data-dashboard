@@ -61,7 +61,7 @@ def selectOptions():
     if dropdown_club==ALL:
         dfOptions=df
     else:
-        dfOptions=df[df.Club==club]
+        dfOptions=df[df.Club==dropdown_club]
     return dfOptions
 
 
