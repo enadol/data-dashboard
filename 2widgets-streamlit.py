@@ -68,11 +68,42 @@ if st.session_state['club']==ALL:
     dropdown_player = st.sidebar.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(df.Jugador))
 else:
     df1=df[df.Club==st.session_state['club']]
-    dropdown_player = st.sidebar.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(df1.Jugador))
-# In[18]:
+    dropdown_player = st.sidebar.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(df1.Jugador), key='player')
 
 
-#def dropdown_club_eventhandler(change):
-#    common_filtering(change.new, dropdown_player.value)
-#def dropdown_player_eventhandler(change):
-#    common_filtering(dropdown_club.value, change.new)
+with st.container():
+    
+    if dropdown_club == ALL:
+        if dropdown_player==ALL:
+            st.write(df)
+        else:
+            st.write(df['Jugador']==dropdown_player))
+
+    elif selected_plot == "Puntos":
+        #st.write("Gráfico de puntos:")
+        graphPuntos(df)
+
+    elif selected_plot == "Público":
+       #st.write("Público en el estadio:")
+       graphStadiums(df)
+
+    elif selected_plot == "Goles":
+        #st.write("Goles a favor y en contra:")
+        graphGoals(df)
+
+    elif selected_plot == "Diff. Goles":
+        #st.write("Diferencia de goles:")
+        goalDiff(df)
+
+    elif selected_plot == "Partidos":
+        #st.write("Partidos:")
+        graphWLD(df)
+
+    elif selected_plot == "xG":
+        #st.write("Expected Goals:")
+        graphBubble(df)
+
+    else:
+        #selected_plot == "Diff. Goles":
+        #st.write("Máximo goleador:")
+        graphTopScorer(df)
