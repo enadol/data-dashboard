@@ -67,7 +67,7 @@ optionsclub=unique_sorted_values_plus_ALL(df.Jugador)
 if st.session_state['club']==ALL:
     st.session_state['player']=optionsfull
 else:
-    df1=df[df.Club==st.session_state['club]]
+    df1=df[df.Club==st.session_state['club']]
     st.session_state['player']=unique_sorted_values_plus_ALL(df1.Jugador)
 # In[18]:
 
