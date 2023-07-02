@@ -73,7 +73,7 @@ def common_filtering(club, player):
             common_filter = df[df.Jugador == player]
     
     with output:
-        display(common_filter)
+        return (common_filter)
 
 
 # In[18]:
