@@ -78,6 +78,8 @@ with st.container():
             st.write(df)
         else:
             st.write(df['Jugador']==dropdown_player)
-
-
-        graphTopScorer(df)
+    else:
+        if dropdown_player==ALL:
+            st.write(df['Club']==dropdown_club)
+        else:
+            st.write(df['Club']==dropdown_club & df['Player']==dropdown_player)
