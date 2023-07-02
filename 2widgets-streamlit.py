@@ -46,12 +46,6 @@ dropdown_club = st.sidebar.selectbox(label="Seleccione el club: ", options =    
 
 dropdown_player = st.sidebar.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(df.Jugador))
 
-st.sidebar(dropdown_club)
-st.sidebar(dropdown_player)
-
-# In[45]:
-
-
 def common_filtering(club, player):
     output.clear_output()
     
