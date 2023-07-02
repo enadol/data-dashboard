@@ -77,33 +77,7 @@ with st.container():
         if dropdown_player==ALL:
             st.write(df)
         else:
-            st.write(df['Jugador']==dropdown_player))
+            st.write(df['Jugador']==dropdown_player)
 
-    elif selected_plot == "Puntos":
-        #st.write("Gráfico de puntos:")
-        graphPuntos(df)
 
-    elif selected_plot == "Público":
-       #st.write("Público en el estadio:")
-       graphStadiums(df)
-
-    elif selected_plot == "Goles":
-        #st.write("Goles a favor y en contra:")
-        graphGoals(df)
-
-    elif selected_plot == "Diff. Goles":
-        #st.write("Diferencia de goles:")
-        goalDiff(df)
-
-    elif selected_plot == "Partidos":
-        #st.write("Partidos:")
-        graphWLD(df)
-
-    elif selected_plot == "xG":
-        #st.write("Expected Goals:")
-        graphBubble(df)
-
-    else:
-        #selected_plot == "Diff. Goles":
-        #st.write("Máximo goleador:")
         graphTopScorer(df)
