@@ -82,4 +82,4 @@ with st.container():
         if dropdown_player==ALL:
             st.write(df[df['Club']==dropdown_club])
         else:
-            st.write(df[(df['Club']==dropdown_club]) & (df['Player']==dropdown_player)])
+            st.write(df[(df['Club']==dropdown_club) & (df['Player']==dropdown_player)])
