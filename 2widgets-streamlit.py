@@ -65,10 +65,10 @@ optionsfull=unique_sorted_values_plus_ALL(df.Club)
 optionsclub=unique_sorted_values_plus_ALL(df.Jugador)
 
 if st.session_state['club']==ALL:
-    dropdown_player = st.sidebar.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(df.Jugador), key="player")
+    dropdown_player = st.sidebar.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(df.Jugador))
 else:
     df1=df[df.Club==st.session_state['club']]
-    dropdown_player = st.sidebar.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(df.Jugador), key="player")
+    dropdown_player = st.sidebar.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(df1.Jugador))
 # In[18]:
 
 
