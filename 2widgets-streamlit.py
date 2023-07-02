@@ -30,16 +30,6 @@ st.set_page_config(layout = "wide", page_title="Bundesliga Data Dashboard")
 
 df=pd.read_excel("blPlayersAll23.xlsm", sheet_name="blplayers2023")
 
-
-# In[39]:
-
-
-#df.head()
-
-
-# In[40]:
-
-
 ALL = 'TODOS'
 def unique_sorted_values_plus_ALL(array):
     unique = array.unique().tolist()
@@ -54,24 +44,9 @@ def unique_sorted_values_plus_ALL(array):
 dropdown_club = st.selectbox(label="Seleccione el club: ", options =    unique_sorted_values_plus_ALL(df.Club))
 #dropdown_club
 
-
-# In[42]:
-
-
-#output_club = widgets.Output()
-
-
-# In[43]:
-
-
-#output = widgets.Output()
-
-
-# In[44]:
-
-
 dropdown_player = st.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(df.Jugador))
 
+st.sidebar(dropdwon_club, dropdwon_player)
 
 # In[45]:
 
