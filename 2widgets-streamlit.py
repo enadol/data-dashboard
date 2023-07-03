@@ -75,15 +75,15 @@ with st.container():
     
     if dropdown_club == ALL:
         if dropdown_player==ALL:
-            st.write(f'Indicadores Club: {dropdown_p} - Jugador: {dropdown_player}')
+            st.write(f'Indicadores Club: {dropdown_club} - Jugador: {dropdown_player}')
             st.write(df)
         else:
-            st.write(f'Indicadores Club: {dropdown_p} - Jugador: {dropdown_player}')
+            st.write(f'Indicadores Club: {dropdown_club} - Jugador: {dropdown_player}')
             st.write(df[df['Jugador']==dropdown_player])
     else:
         if dropdown_player==ALL:
-            st.write(f'Indicadores Club: {dropdown_p} - Jugador: {dropdown_player}')
+            st.write(f'Indicadores Club: {dropdown_club} - Jugador: {dropdown_player}')
             st.write(df[df['Club']==dropdown_club])
         else:
-            st.write(f'Indicadores Club: {dropdown_p} - Jugador: {dropdown_player}')
+            st.write(f'Indicadores Club: {dropdown_club} - Jugador: {dropdown_player}')
             st.write(df[(df['Club']==dropdown_club) & (df['Jugador']==dropdown_player)])
