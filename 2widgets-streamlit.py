@@ -92,7 +92,7 @@ with st.container():
 
     properties = {"border": "1px solid black", "width": "65px", "text-align": "center"}
 
-    df.style.format(precision=2).set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
+    df.style.set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
 
     st.title("NAVEGADOR DE DATOS BUNDESLIGA TORNEO 2022/2023")
     if dropdown_club == ALL:
