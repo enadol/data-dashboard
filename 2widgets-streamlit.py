@@ -97,7 +97,7 @@ with st.container():
     if dropdown_club == ALL:
         if dropdown_player==ALL:
             st.write(f'Indicadores Club: {dropdown_club} - Jugador: {dropdown_player}')
-            st.table(df)
+            st._legacy_dataframe(df)
         else:
             st.write(f'Indicadores Club: {dropdown_club} - Jugador: {dropdown_player}')
             st.write(df[df['Jugador']==dropdown_player])
