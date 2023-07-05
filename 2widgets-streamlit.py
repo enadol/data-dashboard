@@ -68,9 +68,11 @@ def common_filtering():
         else:
             if(dropdown_club != ALL):
                 df1=df[df.Club == club]
+                df1.style.set_table_styles([cell_hover, index_names, headers])
                 dropdown_player.options = unique_sorted_values_plus_ALL(df1.Jugador)
                 #dropdown_player = widgets.Dropdown(options = unique_sorted_values_plus_ALL(df1.Jugador))
                 common_filter = df[df.Jugador == player]
+        common_filter.style.set_table_styles([cell_hover, index_names, headers])
         return common_filter
 
 
