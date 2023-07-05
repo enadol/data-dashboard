@@ -33,7 +33,7 @@ index_names = {
     }
 headers = {
     "selector": "th:not(.index_name)",
-    "props": "background-color: #800000; color: white;"
+    "props": [('background-color', '#800000'), ('color', 'white')]"
     }
 
 properties = {"border": "1px solid black", "width": "65px", "text-align": "center"}
