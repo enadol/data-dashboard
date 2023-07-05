@@ -80,19 +80,19 @@ with st.container():
     cell_hover = {
     "selector": "td:hover",
     "props": [("background-color", "#FFFFE0")]
-}
-index_names = {
+    }
+    index_names = {
     "selector": ".index_name",
     "props": "font-style: italic; color: darkgrey; font-weight:normal;"
-}
-headers = {
+    }
+    headers = {
     "selector": "th:not(.index_name)",
     "props": "background-color: #800000; color: white;"
-}
+    }
 
-properties = {"border": "1px solid black", "width": "65px", "text-align": "center"}
+    properties = {"border": "1px solid black", "width": "65px", "text-align": "center"}
 
-df.style.format(precision=2).set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
+    df.style.format(precision=2).set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
 
     st.title("NAVEGADOR DE DATOS BUNDESLIGA TORNEO 2022/2023")
     if dropdown_club == ALL:
