@@ -103,7 +103,7 @@ with st.container():
             st.write(f'Indicadores Club: {dropdown_club} - Jugador: {dropdown_player}')
             df_filt=df[df['Jugador']==dropdown_player]
             df_styled=df_filt.style.set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
-            st.table(df_styled[df_styled['Jugador']==dropdown_player])
+            st.table(df_styled)
     else:
         if dropdown_player==ALL:
             st.write(f'Indicadores Club: {dropdown_club} - Jugador: {dropdown_player}')
