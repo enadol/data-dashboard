@@ -89,6 +89,7 @@ else:
     df1=df[df.Club==st.session_state['club']]
     dropdown_player = st.sidebar.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(df1.Jugador), key='player')
 
+st.sidebar.write("Datos y fechas al término del torneo 2022/23, mayo de 2023")
 
 with st.container():
 
