@@ -38,7 +38,7 @@ headers = {
 
 properties = {"border": "1px solid black", "width": "65px", "text-align": "center"}
 
-df.style.set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
+df=df.style.set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
 
 ALL = 'TODOS'
 def unique_sorted_values_plus_ALL(array):
