@@ -103,16 +103,16 @@ with st.container():
         else:
             st.write(f'Indicadores Club: {dropdown_club} - Jugador: {dropdown_player}')
             df_filt=df[df['Jugador']==dropdown_player]
-            df_styled=df_filt.style.set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
+            df_styled=df_filt.style.format(precision=0).set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
             st.table(df_styled)
     else:
         if dropdown_player==ALL:
             st.write(f'Indicadores Club: {dropdown_club} - Jugador: {dropdown_player}')
             df_filt=df[df['Club']==dropdown_club]
-            df_styled=df_filt.style.set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
+            df_styled=df_filt.style.format(precision=0).set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
             st.table(df_styled)
         else:
             st.write(f'Indicadores Club: {dropdown_club} - Jugador: {dropdown_player}')
             df_filt=df[(df['Club']==dropdown_club) & (df['Jugador']==dropdown_player)]
-            df_styled=df_filt.style.set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
+            df_styled=df_filt.style.format(precision=0).set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
             st.table(df_styled)
