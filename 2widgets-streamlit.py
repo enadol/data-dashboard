@@ -98,7 +98,7 @@ with st.container():
         if dropdown_player==ALL:
             st.write(f'Indicadores Club: {dropdown_club} - Jugador: {dropdown_player}')
             df_styled=df.style.set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
-            st._legacy_dataframe(df_styled)
+            st.table(df_styled)
         else:
             st.write(f'Indicadores Club: {dropdown_club} - Jugador: {dropdown_player}')
             st.write(df[df['Jugador']==dropdown_player])
