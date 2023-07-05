@@ -22,9 +22,23 @@ import plotly as plt
 st.set_page_config(layout = "wide", page_title="Bundesliga Data Dashboard - Torneo 2022/2023")
 
 df=pd.read_excel("blPlayersAll23.xlsm", sheet_name="blplayers2023")
+    
+cell_hover = {
+    "selector": "td:hover",
+    "props": [("background-color", "#FFFFE0")]
+    }
+index_names = {
+    "selector": ".index_name",
+    "props": "font-style: italic; color: darkgrey; font-weight:normal;"
+    }
+headers = {
+    "selector": "th:not(.index_name)",
+    "props": "background-color: #800000; color: white;"
+    }
 
+properties = {"border": "1px solid black", "width": "65px", "text-align": "center"}
 
-#df.style.set_table_styles([cell_hover, index_names, headers])
+df.style.set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
 
 ALL = 'TODOS'
 def unique_sorted_values_plus_ALL(array):
@@ -77,22 +91,7 @@ else:
 
 
 with st.container():
-    cell_hover = {
-    "selector": "td:hover",
-    "props": [("background-color", "#FFFFE0")]
-    }
-    index_names = {
-    "selector": ".index_name",
-    "props": "font-style: italic; color: darkgrey; font-weight:normal;"
-    }
-    headers = {
-    "selector": "th:not(.index_name)",
-    "props": "background-color: #800000; color: white;"
-    }
 
-    properties = {"border": "1px solid black", "width": "65px", "text-align": "center"}
-
-    df.style.set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
 
     st.title("NAVEGADOR DE DATOS BUNDESLIGA TORNEO 2022/2023")
     if dropdown_club == ALL:
