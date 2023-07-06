@@ -22,7 +22,7 @@ import plotly as plt
 st.set_page_config(layout = "wide", page_title="Bundesliga Data Dashboard - Torneo 2022/2023")
 
 df=pd.read_excel("blPlayersAll23.xlsm", sheet_name="blplayers2023")
-df=df.style.hide(axis="index")
+#df=df.style.hide(axis="index")
     
 cell_hover = {
     "selector": "td:hover",
@@ -39,7 +39,7 @@ headers = {
 
 properties = {"border": "1px solid black", "width": "65px", "text-align": "center"}
 
-df.style.set_table_styles([cell_hover, headers]).set_properties(**properties)
+df.style.set_table_styles([cell_hover, headers]).set_properties(**properties).hide(axis="index")
 
 ALL = 'TODOS'
 def unique_sorted_values_plus_ALL(array):
