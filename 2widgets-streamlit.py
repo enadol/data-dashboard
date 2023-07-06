@@ -126,6 +126,7 @@ with st.container():
              #   c4, c5, c6=st.columns([0.3, 0.3, 0.3], gap="small")
               #  c4.write(df_filt['PJ'])
                # c5.write(df_filt['Goles'])
-                #c6.write(df_filt['Asistencias'])                
+                #c6.write(df_filt['Asistencias'])
+            columns1=['Jugador', 'Nacimiento', 'Nación']
 
-            st.table(df_styled)
+            st.table(df_styled[columns1])
