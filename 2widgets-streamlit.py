@@ -21,7 +21,7 @@ import plotly as plt
 
 st.set_page_config(layout = "wide", page_title="Bundesliga Data Dashboard - Torneo 2022/2023")
 
-df=pd.read_excel("blPlayersAll23.xlsm", sheet_name="blplayers2023")
+df=pd.read_excel("blPlayersAll23.xlsm", sheet_name="blplayers2023").style.hide_index()
 
     
 cell_hover = {
