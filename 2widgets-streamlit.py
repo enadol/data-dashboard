@@ -116,12 +116,12 @@ with st.container():
             df_filt=df[(df['Club']==dropdown_club) & (df['Jugador']==dropdown_player)]
             df_styled=df_filt.style.format(precision=0).set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
             with st.container():
-                c1, c2, c3=st.columns([0.3, 0.3, 0.3])
+                c1, c2, c3=st.columns([0.3, 0.3, 0.3], gap="small")
                 c1.write(df_filt['Jugador'])
                 c2.write(df_filt['Nacimiento'])
                 c3.write(df_filt['Nación'])
             with st.container():
-                c4, c5, c6=st.columns([0.3, 0.3, 0.3])
+                c4, c5, c6=st.columns([0.3, 0.3, 0.3], gap="small")
                 c4.write(df_filt['PJ'])
                 c5.write(df_filt['Goles'])
                 c6.write(df_filt['Asistencias'])                
