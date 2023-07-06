@@ -113,7 +113,7 @@ with st.container():
             st.table(df_styled)
         else:
             st.write(f'Indicadores Club: {dropdown_club} - Jugador: {dropdown_player}')
-            df_filt=df[(df['Club']==dropdown_club) & (df['Jugador']==dropdown_player)].style.hide(axis="index")
+            df_filt=df[(df['Club']==dropdown_club) & (df['Jugador']==dropdown_player)]
             df_styled=df_filt.style.format(precision=0).set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
             with st.container():
                 c1, c2, c3=st.columns([0.3, 0.3, 0.3])
