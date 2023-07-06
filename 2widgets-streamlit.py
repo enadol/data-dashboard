@@ -117,9 +117,9 @@ with st.container():
             df_styled=df_filt.style.format(precision=0).set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
             with st.container():
                 c1, c2, c3=st.columns([0.3, 0.3, 0.3])
-                c1.write(df_filt['Jugador'].style.hide(axis="index"))
-                c2.write(df_filt['Nacimiento'].style.hide(axis="index"))
-                c3.write(df_filt['Nación'].style.hide(axis="index"))
+                c1.write(df_filt['Jugador']).style.hide(axis="index")
+                c2.write(df_filt['Nacimiento']).style.hide(axis="index")
+                c3.write(df_filt['Nación']).style.hide(axis="index")
             with st.container():
                 c4, c5, c6=st.columns([0.3, 0.3, 0.3])
                 c4.write(df_filt['PJ'])
