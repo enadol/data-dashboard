@@ -122,5 +122,8 @@ with st.container():
                 c3.write(df_filt['Nación'])
             with st.container():
                 c4, c5, c6=st.columns([0.3, 0.3, 0.3])
+                c4.write(df_filt['PJ'])
+                c5.write(df_filt['Goles'])
+                c6.write(df_filt['Asistencias'])                
 
             #st.table(df_styled)
