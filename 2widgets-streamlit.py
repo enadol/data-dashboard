@@ -117,8 +117,8 @@ with st.container():
             df_styled=df_filt.style.format(precision=0).set_table_styles([cell_hover, index_names, headers]).set_properties(**properties)
             with st.container():
                 c1, c2, c3=st.columns(3)
-                c1.write(df_styled['Jugador'])
-                c2.write(df_styled['Nacimiento'])
-                c3.write(df_styled['Nación'])
+                c1.write(df_filt['Jugador'])
+                c2.write(df_filt['Nacimiento'])
+                c3.write(df_filt['Nación'])
 
             #st.table(df_styled)
