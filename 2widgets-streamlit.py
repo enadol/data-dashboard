@@ -38,7 +38,7 @@ headers = {
 }
 
 headersup={
-    "selector": "th.col_heading",
+    "selector": "th.col_heading level0 col0 css-a51556 eyf2tjf1g",
     "props": "text-align: center"}
 
 properties = {"border": "1px solid black", "width": "65px", "text-align": "center"}
