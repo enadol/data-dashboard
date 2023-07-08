@@ -83,16 +83,16 @@ def common_filtering():
 
 
 #dropdown_club
-dropdown_club = st.sidebar.selectbox(label="Seleccione el club: ", options =    unique_sorted_values_plus_ALL(df.Club), key="club")
+dropdown_club = st.sidebar.selectbox(label="Seleccione el club: ", options =    unique_sorted_values_plus_ALL(dfpre.Club), key="club")
 #dropdown_player = st.sidebar.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(df.Jugador), key="player")
 
-optionsfull=unique_sorted_values_plus_ALL(df.Club)
-optionsclub=unique_sorted_values_plus_ALL(df.Jugador)
+#optionsfull=unique_sorted_values_plus_ALL(df.Club)
+#optionsclub=unique_sorted_values_plus_ALL(df.Jugador)
 
 if st.session_state['club']==ALL:
-    dropdown_player = st.sidebar.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(df.Jugador))
+    dropdown_player = st.sidebar.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(dfpre.Jugador))
 else:
-    df1=df[df.Club==st.session_state['club']]
+    df1=df[dfpre.Club==st.session_state['club']]
     dropdown_player = st.sidebar.selectbox(label="Seleccione el Jugador: ", options =    unique_sorted_values_plus_ALL(df1.Jugador), key='player')
 
 st.sidebar.write("Datos, edades y fechas al término del torneo 2022/23 de la Bundesliga en Alemania (mayo de 2023)")
