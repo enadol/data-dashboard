@@ -42,7 +42,7 @@ headersup={
     "selector": "th.col_heading level0 col0",
     "props": "text-align: center"}
 
-properties = {"border": "1px solid black", "width": "65px", "text-align": "center", "hide_index": "True"}
+properties = {"border": "1px solid black", "width": "65px", "text-align": "center"}
 
 
 #df.style.set_table_styles([cell_hover, headers, headersup], overwrite=True).set_properties(**properties).hide(axis="index")
