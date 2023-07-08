@@ -44,9 +44,9 @@ headersup={
 properties = {"border": "1px solid black", "width": "65px", "text-align": "center"}
 
 
-df= st.data_editor(
-df, hide_index=True
-)
+#df= st.data_editor(
+#df, hide_index=True
+#)
 
 
 
