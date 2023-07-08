@@ -50,7 +50,7 @@ dfpre, hide_index=True
 
 
 
-df.style.set_table_styles([cell_hover, headers, headersup], overwrite=True).set_properties(**properties).hide(axis="index")
+dfpre.style.set_table_styles([cell_hover, headers, headersup], overwrite=True).set_properties(**properties).hide(axis="index")
 
 ALL = 'TODOS'
 def unique_sorted_values_plus_ALL(array):
