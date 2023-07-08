@@ -23,6 +23,7 @@ st.set_page_config(layout = "wide", page_title="Bundesliga Data Dashboard - Torn
 
 df=pd.read_excel("blPlayersAll23.xlsm", sheet_name="blplayers2023")
 
+st.dataframe(df, hide_index=True)
     
 cell_hover = {
     "selector": "td:hover",
@@ -98,10 +99,7 @@ else:
 st.sidebar.write("Datos, edades y fechas al término del torneo 2022/23 de la Bundesliga en Alemania (mayo de 2023)")
 
 with st.container():
-    df= st.data_editor(
-    df, hide_index=True
-    )
-
+    
     st.title("NAVEGADOR DE DATOS BUNDESLIGA TORNEO 2022/2023")
     if dropdown_club == ALL:
         if dropdown_player==ALL:
