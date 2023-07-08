@@ -55,32 +55,32 @@ def unique_sorted_values_plus_ALL(array):
     return unique
 
 
-def common_filtering():
-        if (dropdown_club == ALL) & (dropdown_player == ALL):
-            dropdown_player.options = unique_sorted_values_plus_ALL(df.Jugador)
+#def common_filtering():
+ #       if (dropdown_club == ALL) & (dropdown_player == ALL):
+ #           dropdown_player.options = unique_sorted_values_plus_ALL(df.Jugador)
+ #           #dropdown_player = widgets.Dropdown(options = unique_sorted_values_plus_ALL(df.Jugador))
+ #           common_filter = df
+ #       elif (dropdown_club == ALL):
+ #           dropdown_player.options = unique_sorted_values_plus_ALL(df.Jugador)
             #dropdown_player = widgets.Dropdown(options = unique_sorted_values_plus_ALL(df.Jugador))
-            common_filter = df
-        elif (dropdown_club == ALL):
-            dropdown_player.options = unique_sorted_values_plus_ALL(df.Jugador)
+  #          common_filter = df[df.Jugador == player]
+   #     elif (dropdown_player == ALL):
+   #         if(dropdown_club ==ALL):
+   #             dropdown_player.options = unique_sorted_values_plus_ALL(df.Jugador)
+   #         else:
+   #             df1=df[df.Club == club]
+   #             dropdown_player.options = unique_sorted_values_plus_ALL(df1.Jugador)
             #dropdown_player = widgets.Dropdown(options = unique_sorted_values_plus_ALL(df.Jugador))
-            common_filter = df[df.Jugador == player]
-        elif (dropdown_player == ALL):
-            if(dropdown_club ==ALL):
-                dropdown_player.options = unique_sorted_values_plus_ALL(df.Jugador)
-            else:
-                df1=df[df.Club == club]
-                dropdown_player.options = unique_sorted_values_plus_ALL(df1.Jugador)
-            #dropdown_player = widgets.Dropdown(options = unique_sorted_values_plus_ALL(df.Jugador))
-            common_filter = df[df.Club == club]
-        else:
-            if(dropdown_club != ALL):
-                df1=df[df.Club == club]
-                df1.style.set_table_styles([cell_hover, index_names, headers])
-                dropdown_player.options = unique_sorted_values_plus_ALL(df1.Jugador)
+   #         common_filter = df[df.Club == club]
+    #    else:
+    #        if(dropdown_club != ALL):
+    #            df1=df[df.Club == club]
+    #            df1.style.set_table_styles([cell_hover, index_names, headers])
+    #            dropdown_player.options = unique_sorted_values_plus_ALL(df1.Jugador)
                 #dropdown_player = widgets.Dropdown(options = unique_sorted_values_plus_ALL(df1.Jugador))
-                common_filter = df[df.Jugador == player]
-        common_filter.style.set_table_styles([cell_hover, index_names, headers])
-        return common_filter
+     #           common_filter = df[df.Jugador == player]
+     #   common_filter.style.set_table_styles([cell_hover, index_names, headers])
+      #  return common_filter
 
 
 #dropdown_club
