@@ -23,7 +23,7 @@ st.set_page_config(layout = "wide", page_title="Bundesliga Data Dashboard - Torn
 
 df=pd.read_excel("blPlayersAll23.xlsm", sheet_name="blplayers2023")
 
-st.dataframe(df, hide_index=True)
+df=st.dataframe(df, hide_index=True)
     
 cell_hover = {
     "selector": "td:hover",
