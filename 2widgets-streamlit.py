@@ -21,7 +21,7 @@ import plotly as plt
 
 st.set_page_config(layout = "wide", page_title="Bundesliga Data Dashboard - Torneo 2022/2023")
 
-df=pd.read_excel("blPlayersAll23.xlsm", sheet_name="blplayers2023")
+dfpre=pd.read_excel("blPlayersAll23.xlsm", sheet_name="blplayers2023")
 
     
 cell_hover = {
@@ -42,12 +42,6 @@ headersup={
     "props": "text-align: center"}
 
 properties = {"border": "1px solid black", "width": "65px", "text-align": "center"}
-
-
-df= st.data_editor(
-df, hide_index=True
-)
-
 
 
 #df.style.set_table_styles([cell_hover, headers, headersup], overwrite=True).set_properties(**properties).hide(axis="index")
@@ -104,7 +98,9 @@ else:
 st.sidebar.write("Datos, edades y fechas al término del torneo 2022/23 de la Bundesliga en Alemania (mayo de 2023)")
 
 with st.container():
-
+    df= st.data_editor(
+    dfpre, hide_index=True
+    )
 
     st.title("NAVEGADOR DE DATOS BUNDESLIGA TORNEO 2022/2023")
     if dropdown_club == ALL:
